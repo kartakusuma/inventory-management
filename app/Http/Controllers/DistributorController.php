@@ -46,7 +46,9 @@ class DistributorController extends Controller
         // 
     }
 
-    public function destroy() {
-        // 
+    public function destroy($id) {
+        Distributor::whereId($id)->delete();
+        
+        return redirect()->route('distributors');
     }
 }
