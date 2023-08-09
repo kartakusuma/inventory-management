@@ -38,17 +38,33 @@ class DistributorController extends Controller
         return redirect()->route('distributors');
     }
 
-    public function edit() {
-        // 
+    public function edit($id) {
+        $distributor = Distributor::find($id);
+
+        return view('distributor.edit', compact('distributor'));
     }
 
-    public function update() {
-        // 
+    public function update(Request $request, $id) {
+        $validator = Validator::make($request->all(), [
+            'name' => 'required',
+            'email' => 'required|email',
+            'whatsapp' => 'required',
+        ]);
+
+        if ($validator->fails()) {
+            return redirect()->back()->withInput()->withErrors($validator);
+        }
+
+        $data = $request->only(['name', 'email', 'whatsapp']);
+
+        Distributor::whereId($id)->update($data);
+
+        return redirect()->route('distributors');
     }
 
     public function destroy($id) {
         Distributor::whereId($id)->delete();
-        
+
         return redirect()->route('distributors');
     }
 }
