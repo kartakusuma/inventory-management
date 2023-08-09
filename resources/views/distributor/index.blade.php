@@ -71,7 +71,7 @@
                             </div>
                             <div class="modal-footer justify-content-between">
                               <button type="button" class="btn btn-outline-light" data-dismiss="modal">Close</button>
-                              <form action="{{ route('users.destroy', $distributor->id) }}" method="post">
+                              <form action="{{ route('distributor.destroy', $distributor->id) }}" method="post">
                                 @csrf
                                 @method('DELETE')
                                 <button type="submit" class="btn btn-outline-light">Yes</button></form>
