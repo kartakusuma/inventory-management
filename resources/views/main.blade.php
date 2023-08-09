@@ -49,7 +49,7 @@
         <a href="{{ route('users') }}" class="nav-link">Users</a>
       </li>
       <li class="nav-item d-none d-sm-inline-block">
-        <a href="#" class="nav-link">Distributors</a>
+        <a href="{{ route('distributors') }}" class="nav-link">Distributors</a>
       </li>
       <li class="nav-item d-none d-sm-inline-block">
         <a href="#" class="nav-link">Products</a>
@@ -121,7 +121,7 @@
             </a>
           </li>
           <li class="nav-item">
-            <a href="#" class="nav-link">
+            <a href="{{ route('distributors') }}" class="nav-link">
               <i class="nav-icon fas fa-truck"></i>
               <p>
                 Distributors
