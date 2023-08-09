@@ -51,12 +51,13 @@
                         <td>{{ $user->name }}</td>
                         <td>{{ $user->email }}</td>
                         <td>
+                            <a href="{{ route('users.show', $user->id) }}" class="btn btn-success"><i class="fas fa-info"></i> Detail</a>
                             <a href="{{ route('users.edit', $user->id) }}" class="btn btn-warning"><i class="fas fa-pen"></i> Edit</a>
                             <a data-toggle="modal" data-target="#modal-delete{{ $user->id }}" class="btn btn-danger"><i class="fas fa-trash"></i>Delete</a>
                         </td>
                     </tr>
 
-                    <div class="modal fade" id="modal-delete">
+                    <div class="modal fade" id="modal-delete{{ $user->id }}">
                         <div class="modal-dialog">
                           <div class="modal-content bg-danger">
                             <div class="modal-header">
