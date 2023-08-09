@@ -52,7 +52,7 @@
                         <td>{{ $distributor->email }}</td>
                         <td>
                             <a href="{{ url('https://wa.me/'.$distributor->whatsapp) }}" target="blank" class="btn btn-success"><i class="fas fa-comment"></i> Chat</a>
-                            <a href="{{ route('users.edit', $distributor->id) }}" class="btn btn-warning"><i class="fas fa-pen"></i> Edit</a>
+                            <a href="{{ route('distributors.edit', $distributor->id) }}" class="btn btn-warning"><i class="fas fa-pen"></i> Edit</a>
                             <a data-toggle="modal" data-target="#modal-delete{{ $distributor->id }}" class="btn btn-danger"><i class="fas fa-trash"></i>Delete</a>
                         </td>
                     </tr>
