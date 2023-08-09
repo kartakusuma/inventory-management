@@ -31,7 +31,7 @@
         <div class="col-12">
           <div class="card">
             <div class="card-header">
-              <a href="{{ route('users.create') }}" class="btn btn-success">Add New User</a>
+              <a href="{{ route('users.create') }}" class="btn btn-primary">Add New User</a>
             </div>
             <!-- /.card-header -->
             <div class="card-body">
