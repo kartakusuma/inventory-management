@@ -79,7 +79,7 @@
           <img src="dist/img/user2-160x160.jpg" class="img-circle elevation-2" alt="User Image">
         </div>
         <div class="info">
-          <a href="#" class="d-block">User Aktif</a>
+          <a href="#" class="d-block">{{ Auth::user()->name }}</a>
         </div>
       </div>
 
@@ -124,9 +124,18 @@
               </p>
             </a>
           </li>
+          <li class="nav-item mt-4">
+            <a href="{{ route('logout') }}" class="nav-link">
+              <i class="nav-icon fas fa-power-off"></i>
+              <p>
+                Logout
+              </p>
+            </a>
+          </li>
         </ul>
       </nav>
       <!-- /.sidebar-menu -->
+
     </div>
     <!-- /.sidebar -->
   </aside>
