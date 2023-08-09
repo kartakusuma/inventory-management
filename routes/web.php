@@ -28,6 +28,6 @@ Route::group(['middleware' => ['auth']], function () {
     Route::post('users/store', [UserController::class, 'store'])->name('users.store');
     Route::get('users/{id}', [UserController::class, 'show'])->name('users.show');
     Route::get('edit/{id}', [UserController::class, 'edit'])->name('users.edit');
-    Route::get('update/{id}', [UserController::class, 'update'])->name('users.update');
-    Route::post('destroy/{id}', [UserController::class, 'destroy'])->name('users.destroy');
+    Route::patch('update/{id}', [UserController::class, 'update'])->name('users.update');
+    Route::delete('destroy/{id}', [UserController::class, 'destroy'])->name('users.destroy');
 });
