@@ -52,7 +52,7 @@
         <a href="{{ route('distributors') }}" class="nav-link">Distributors</a>
       </li>
       <li class="nav-item d-none d-sm-inline-block">
-        <a href="#" class="nav-link">Products</a>
+        <a href="{{ route('products') }}" class="nav-link">Products</a>
       </li>
     </ul>
 
@@ -129,7 +129,7 @@
             </a>
           </li>
           <li class="nav-item">
-            <a href="#" class="nav-link">
+            <a href="{{ route('products') }}" class="nav-link">
               <i class="nav-icon fas fa-cubes"></i>
               <p>
                 Products
